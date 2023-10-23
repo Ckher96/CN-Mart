@@ -1,0 +1,23 @@
+.Header {
+  display: flex;
+}
+
+.logo {
+    background-color: blue;
+    width: 20%;
+    height: 6rem;
+}
+
+.storeName {
+    display: flex;
+    background-color: brown;
+    width: 100%;
+    height: 6rem;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+.storeName h1 {
+    display: inline;
+    padding-right: 1rem;
+}
