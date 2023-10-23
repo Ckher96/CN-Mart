@@ -1,0 +1,23 @@
+.Nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 2rem;
+    background-color: aqua;
+}
+
+.Nav a {
+    border: 2px black solid;
+    border-radius: 10px;
+    margin: 0 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.Nav a:hover {
+    background-color: antiquewhite;
+}
+
+.Nav a:active {
+    background-color: blueviolet;
+}
