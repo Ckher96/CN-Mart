@@ -1,0 +1,12 @@
+.Home {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Location {
+  flex: 1;
+}
+
+.Sell {
+  flex: 1;
+}

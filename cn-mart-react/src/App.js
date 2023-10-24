@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <Header />
       <Nav />
       <Routes>
-        <Route path="/" element={<h1>Home</h1>} />
+        <Route path="/" element={<Home/>} />
         <Route path="/store" element={<h1>Store</h1>} />
         <Route path="/about" element={<h1>About</h1>} />
         <Route path="/hours" element={<h1>Hours</h1>} />
