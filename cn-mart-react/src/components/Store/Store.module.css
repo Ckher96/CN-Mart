@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    justify-content:space-between;
+    list-style: none;
+    padding-inline-start: 0px;
+
+}
+
+.container li {
+    flex: 1;
+    background-color: aqua;
+    margin: 0 1rem;
+    height: 7rem;
+    
+}
+
+@media (max-width: 800px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        grid-template-rows: auto;
+    }
+
+    .container li {
+        background-color: aqua;
+        height: 7rem;
+        margin: 0;
+    }
+}

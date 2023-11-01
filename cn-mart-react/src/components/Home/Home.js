@@ -25,7 +25,7 @@ export default function Home() {
       </div>
       <div className={style.Sell}>
         <h2>We Sell</h2>
-        <ul>
+        <ul className={style.container}>
             <li>Chips</li>
             <li>Soda</li>
             <li>Ramen</li>

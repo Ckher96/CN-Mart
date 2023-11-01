@@ -1,12 +1,35 @@
 .Home {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .Location {
   flex: 1;
+  padding: 1rem 1rem;
 }
 
 .Sell {
   flex: 1;
+  padding: 1rem 1rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  grid-template-rows: auto;
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+.container li {
+  background-color: aqua;
+  height: 7rem;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .Home {
+    flex-direction: column;
+  }
 }
