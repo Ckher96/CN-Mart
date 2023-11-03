@@ -8,6 +8,7 @@ export default function Nav() {
             <Link to="/store">Store</Link>
             <Link to="/about">About</Link>
             <Link to="/hours">Hours</Link>
+            <Link to="/cart">Cart</Link>
         </nav>
     )
 }
