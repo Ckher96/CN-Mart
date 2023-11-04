@@ -1,9 +1,9 @@
-import style from "./Home.module.css"
+import style from "./Home.module.css";
 
 export default function Home() {
   return (
-    <div className={style.Home}>
-      <div className={style.Location}>
+    <div className={style.home}>
+      <div>
         <h2>Located in Sheboygan, WI</h2>
         <p>
           Dolor ut quis consequat cupidatat. Culpa voluptate aliquip laboris
@@ -23,14 +23,14 @@ export default function Home() {
           eu ad dolore laborum ea sunt veniam Lorem fugiat sunt eiusmod est.
         </p>
       </div>
-      <div className={style.Sell}>
+      <div>
         <h2>We Sell</h2>
         <ul className={style.container}>
-            <li>Chips</li>
-            <li>Soda</li>
-            <li>Ramen</li>
-            <li>Drinks</li>
-            <li>Candy</li>
+          <li>Chips</li>
+          <li>Soda</li>
+          <li>Ramen</li>
+          <li>Drinks</li>
+          <li>Candy</li>
         </ul>
       </div>
     </div>

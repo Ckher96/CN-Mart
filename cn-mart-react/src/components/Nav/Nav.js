@@ -4,7 +4,7 @@ import style from "./Nav.module.css";
 export default function Nav() {
   const { pathname } = useLocation();
   return (
-    <nav className={style.Nav}>
+    <nav className={style.nav}>
       <Link to="/" className={pathname === "/" ? style.active : ""}>
         Home
       </Link>
