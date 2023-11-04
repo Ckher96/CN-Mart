@@ -6,12 +6,17 @@
     background-color: aqua;
 }
 
+.active {
+    background-color: blueviolet;
+}
+
 .Nav a {
     border: 2px black solid;
     border-radius: 10px;
     margin: 0 1rem;
     width: 100%;
     text-align: center;
+    text-decoration: none;
 }
 
 .Nav a:hover {

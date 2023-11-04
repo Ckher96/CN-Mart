@@ -1,14 +1,25 @@
-import { Link } from "react-router-dom"
-import style from "./Nav.module.css"
+import { Link, useLocation } from "react-router-dom";
+import style from "./Nav.module.css";
 
 export default function Nav() {
-    return (
-        <nav className={style.Nav}>
-            <Link to="/">Home</Link>
-            <Link to="/store">Store</Link>
-            <Link to="/about">About</Link>
-            <Link to="/hours">Hours</Link>
-            <Link to="/cart">Cart</Link>
-        </nav>
-    )
+  const { pathname } = useLocation();
+  return (
+    <nav className={style.Nav}>
+      <Link to="/" className={pathname === "/" ? style.active : ""}>
+        Home
+      </Link>
+      <Link to="/store" className={pathname === "/store" ? style.active : ""}>
+        Store
+      </Link>
+      <Link to="/about" className={pathname === "/about" ? style.active : ""}>
+        About
+      </Link>
+      <Link to="/hours" className={pathname === "/hours" ? style.active : ""}>
+        Hours
+      </Link>
+      <Link to="/cart" className={pathname === "/cart" ? style.active : ""}>
+        Cart
+      </Link>
+    </nav>
+  );
 }
