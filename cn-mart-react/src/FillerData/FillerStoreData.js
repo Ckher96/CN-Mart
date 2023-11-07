@@ -1,7 +1,7 @@
 const fillerData = [
-  { name: "Hot Cheetos", price: 10, cat: "chip" },
-  { name: "Fanta", price: 10, cat: "soda" },
-  { name: "ramen", price: 10, cat: "noodle" },
-  { name: "Air head", price: 10, cat: "candy" },
+  { name: "Hot Cheetos", price: 1, cat: "chips" },
+  { name: "Fanta", price: 2, cat: "soda" },
+  { name: "ramen", price: 4.5, cat: "noodles" },
+  { name: "Air head", price: 0.5, cat: "candy" },
 ];
 export default fillerData;

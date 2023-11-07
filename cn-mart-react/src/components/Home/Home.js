@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import style from "./Home.module.css";
 
 export default function Home() {
@@ -26,11 +27,11 @@ export default function Home() {
       <div>
         <h2>We Sell</h2>
         <ul className={style.container}>
-          <li>Chips</li>
-          <li>Soda</li>
-          <li>Ramen</li>
-          <li>Drinks</li>
-          <li>Candy</li>
+          <li><Link to='store/chips'>Chips</Link></li>
+          <li><Link to='store/soda'>Soda</Link></li>
+          <li><Link to='store/noodles'>Ramen</Link></li>
+          <li><Link to='store/drinks'>Drinks</Link></li>
+          <li><Link to='store/candy'>Candy</Link></li>
         </ul>
       </div>
     </div>
