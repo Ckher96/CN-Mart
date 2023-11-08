@@ -5,7 +5,6 @@ import ItemCard from "../Utility/ItemCard";
 export default function StoreCat() {
   const { itemCategory } = useParams();
   const navigate = useNavigate()
-  console.log(itemCategory);
   const categorizedItems = fillerData
     .filter((item) => item.cat === itemCategory)
     .map((item) => <ItemCard item={item} />);

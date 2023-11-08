@@ -23,10 +23,7 @@ export default function Store() {
           <Link to="/store/noodles">Noodles</Link>
         </li>
       </ul>
-      <div className={style.items}>
-        {formatedItems}
-      </div>
-      
+      <div className={style.items}>{formatedItems}</div>
     </>
   );
 }
