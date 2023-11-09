@@ -1,14 +1,9 @@
-.Home {
+.home {
   display: flex;
   justify-content: space-between;
 }
 
-.Location {
-  flex: 1;
-  padding: 1rem 1rem;
-}
-
-.Sell {
+.home div {
   flex: 1;
   padding: 1rem 1rem;
 }
@@ -28,8 +23,15 @@
   margin: 0;
 }
 
+.container li a {
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 800px) {
-  .Home {
+  .home {
     flex-direction: column;
   }
 }

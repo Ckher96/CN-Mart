@@ -1,4 +1,4 @@
-.Nav {
+.nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -6,18 +6,23 @@
     background-color: aqua;
 }
 
-.Nav a {
+.active {
+    background-color: blueviolet;
+}
+
+.nav a {
     border: 2px black solid;
     border-radius: 10px;
     margin: 0 1rem;
     width: 100%;
     text-align: center;
+    text-decoration: none;
 }
 
-.Nav a:hover {
+.nav a:hover {
     background-color: antiquewhite;
 }
 
-.Nav a:active {
+.nav a:active {
     background-color: blueviolet;
 }
