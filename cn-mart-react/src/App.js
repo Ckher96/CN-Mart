@@ -7,6 +7,7 @@ import Store from "./components/Store/Store";
 import "./App.css";
 import Cart from "./components/Cart/Cart";
 import StoreCat from "./components/Store/StoreCat";
+import About from "./components/About/About";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
           <Route path="/store" element={<Store />} />
           <Route path="/store/:itemCategory" element={<StoreCat />} />
         </Route>
-        <Route path="/about" element={<h1>About</h1>} />
+        <Route path="/about" element={<About />} />
         <Route path="/hours" element={<h1>Hours</h1>} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/*" element={<h1>Path not found</h1>} />
