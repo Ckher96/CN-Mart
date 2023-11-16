@@ -1,12 +1,12 @@
 const express = require('express')
-const fillerData = require("./FillerData/FillerData")
 const app = express()
 const cors = require('cors')
+const storeRouter = require('./store/store.router')
 
 app.use(cors())
 
-app.get("/store", (req, res) => {
-    res.json(fillerData)
-})
+app.use("/store", storeRouter)
 
 app.listen(5000)
+
+module.exports = app
