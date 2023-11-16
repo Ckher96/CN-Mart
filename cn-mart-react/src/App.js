@@ -8,6 +8,7 @@ import "./App.css";
 import Cart from "./components/Cart/Cart";
 import StoreCat from "./components/Store/StoreCat";
 import About from "./components/About/About";
+import StoreProducts from "./components/Store/StoreProducts";
 
 function App() {
   return (
@@ -16,8 +17,8 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/store">
-          <Route path="/store" element={<Store />} />
+        <Route path="/store" element={<Store />}>
+          <Route path="/store" element={<StoreProducts />}  />
           <Route path="/store/:itemCategory" element={<StoreCat />} />
         </Route>
         <Route path="/about" element={<About />} />
