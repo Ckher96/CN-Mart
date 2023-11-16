@@ -1,24 +1,7 @@
 import style from "./Store.module.css";
-import fillerData from "../../FillerData/FillerStoreData";
-import { Link } from "react-router-dom";
-import ItemCard from "../Utility/ItemCard";
-import { useEffect, useState } from "react";
+import { Link, Outlet } from "react-router-dom";
 
 export default function Store() {
-  const [storeItems , setStoreItems] = useState()
-
-  useEffect(() => {
-    async function getData() {
-      const data = await fetch('http://localhost:5000/store').then(res => res.json())
-    console.log(data)
-    setStoreItems(data)
-    }
-    getData()
-  },[])
-
-
-  const formatedItems = storeItems?.map((item, index) => <ItemCard key={index} item={item} />);
-
   return (
     <>
       <h2>What are you looking for?</h2>
@@ -36,7 +19,7 @@ export default function Store() {
           <Link to="/store/noodles">Noodles</Link>
         </li>
       </ul>
-      <div className={style.items}>{formatedItems}</div>
+      <Outlet />
     </>
   );
 }

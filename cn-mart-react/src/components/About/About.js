@@ -1,9 +1,6 @@
-import { useState } from "react"
 import style from "./About.module.css"
 
 function About() {
-    const [p, setP] = useState("hello")
-
     return (
         <div>
             <h1>About Us</h1>
