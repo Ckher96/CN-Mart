@@ -1,12 +1,16 @@
-const express = require('express')
-const app = express()
-const cors = require('cors')
-const storeRouter = require('./store/store.router')
+const express = require("express");
+const app = express();
+const cors = require("cors");
+const storeRouter = require("./store/store.router");
+const cartRouter = require("./cart/cart.router")
 
-app.use(cors())
+app.use(cors());
+app.use(express.json())
 
-app.use("/store", storeRouter)
+app.use("/store", storeRouter);
 
-app.listen(5000)
+app.use("/cart", cartRouter);
 
-module.exports = app
+app.listen(5000);
+
+module.exports = app;

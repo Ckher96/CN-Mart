@@ -5,4 +5,6 @@ const fillerData = [
   { name: "Air head", price: 0.5, cat: "candy", amount: 0 },
 ];
 
-module.exports = fillerData;
+const orders = []
+
+module.exports = {fillerData, orders};
