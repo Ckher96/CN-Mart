@@ -16,6 +16,7 @@ export default function ItemCard({ item }) {
       });
       setCart(newArray);
     } else {
+      item.amount++
       setCart([...cart, item]);
     }
   };
@@ -24,7 +25,7 @@ export default function ItemCard({ item }) {
     <div className={style.card}>
       <h3>{item.name}</h3>
       <div>img</div>
-      <div>{currentItem.amount}</div>
+      <div>{currentItem?.amount}</div>
       <h4>{item.price}</h4>
       <button onClick={addHandler}>"Add To Cart"</button>
     </div>

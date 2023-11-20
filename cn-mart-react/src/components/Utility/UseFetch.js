@@ -27,6 +27,7 @@ export default function useFetch(url, method = "GET", body = null) {
       }
     }
     setErr(null);
+    setData([])
     getData();
   }, [url, method, body]);
 
