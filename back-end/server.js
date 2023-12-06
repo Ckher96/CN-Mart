@@ -1,16 +1,8 @@
-const express = require("express");
-const app = express();
-const cors = require("cors");
-const storeRouter = require("./store/store.router");
-const cartRouter = require("./cart/cart.router")
+const app = require("./app");
+const mongoose = require("mongoose");
 
-app.use(cors());
-app.use(express.json())
-
-app.use("/store", storeRouter);
-
-app.use("/cart", cartRouter);
-
-app.listen(5000);
-
+app.listen(5000, () => {
+  console.log("connected");
+});
+mongoose.connect("mongodb://localhost/appdb");
 module.exports = app;

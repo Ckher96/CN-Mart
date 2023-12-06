@@ -1,9 +1,11 @@
 const router = require("express").Router();
+const Item = require("../models/Item")
 
 const { fillerData } = require("../FillerData/FillerData");
 
-router.route("/").get((req, res) => {
-  res.json({ data: fillerData });
+router.route("/").get(async (req, res) => {
+  const items = await Item.find()
+  res.json({ data: items });
 });
 
 router.route("/:category").get((req, res) => {
