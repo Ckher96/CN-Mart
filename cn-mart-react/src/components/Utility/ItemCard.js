@@ -4,20 +4,25 @@ import { CartContext } from "../../Context/CartContext";
 
 export default function ItemCard({ item }) {
   const { cart, setCart } = useContext(CartContext);
-  const currentItem = cart.find(cartItem => cartItem.name === item.name);
 
   const addHandler = () => {
-    if (cart.some((cartItem) => cartItem.name === item.name)) {
-      const newArray = cart.map((cartItem) => {
+    if (cart.items.some((cartItem) => cartItem.name === item.name)) {
+      const newArray = cart.items.map((cartItem) => {
         if (cartItem.name === item.name) {
           cartItem.amount++;
           return cartItem;
         } else return cartItem;
       });
-      setCart(newArray);
+      setCart((p) => {
+        p.items = newArray
+        return p;
+      });
     } else {
-      item.amount++
-      setCart([...cart, item]);
+      item.amount = 1
+      setCart((p) => {
+        p.items = [...cart.items, item]
+        return p
+      });
     }
   };
 
@@ -25,7 +30,6 @@ export default function ItemCard({ item }) {
     <div className={style.card}>
       <h3>{item.name}</h3>
       <div>img</div>
-      <div>{currentItem?.amount}</div>
       <h4>{item.price}</h4>
       <button onClick={addHandler}>"Add To Cart"</button>
     </div>
