@@ -5,6 +5,8 @@ export default function useFetch(url, method = "GET", body = null) {
   const [err, setErr] = useState(null);
 
   useEffect(() => {
+    setErr(null);
+    setData([]);
     async function getData() {
       const options = {
         method: method,
@@ -26,8 +28,6 @@ export default function useFetch(url, method = "GET", body = null) {
         setErr(e.message);
       }
     }
-    setErr(null);
-    setData([])
     getData();
   }, [url, method, body]);
 
