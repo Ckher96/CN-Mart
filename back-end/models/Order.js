@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const orderSchema = mongoose.Schema({
-  items: Array,
+  items: [{}],
   totalPrice: Number,
 });
 

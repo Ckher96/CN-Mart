@@ -1,12 +1,16 @@
 const router = require("express").Router();
+const Order = require("../models/Order");
 
-const { orders } = require("../FillerData/FillerData.js");
-
-router.route("/").post((req, res) => {
-  const { data } = req.body;
-  orders.push(data);
-  console.log(orders)
-  
-});
+router
+  .route("/")
+  .post(async (req, res) => {
+    const { data } = req.body;
+    const newOrder = await Order.create(data);
+    console.log(newOrder);
+  })
+  .get(async (req, res) => {
+    const items = await Order.find();
+    res.json({ data: items });
+  });
 
 module.exports = router;
