@@ -5,12 +5,11 @@ router
   .route("/")
   .post(async (req, res) => {
     const { data } = req.body;
-    const newOrder = await Order.create(data);
-    console.log(newOrder);
+    await Order.create(data);
   })
   .get(async (req, res) => {
-    const items = await Order.find();
-    res.json({ data: items });
+    const orders = await Order.find();
+    res.json({ data: orders });
   });
 
 module.exports = router;

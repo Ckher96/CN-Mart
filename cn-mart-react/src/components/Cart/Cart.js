@@ -10,10 +10,12 @@ export default function Cart() {
   const formatedCart = cart.items.map((item, index) => (
     <CartItemCard key={index} item={item} />
   ));
+  
   const totalPrice = cart.items.reduce(
     (acc, cartItem) => (acc += cartItem.price * cartItem.amount),
     0
   );
+  
   setCart((p) => {
     p.totalPrice = totalPrice;
     return p;
