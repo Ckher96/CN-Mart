@@ -10,7 +10,7 @@ export default function CartItemCard({ item }) {
       <div>{item.amount}</div>
       <h4>{item.price}</h4>
       <AddButton item={item} />
-      {item.amount > 0 ? <RemoveButton item={item} /> : ""}
+      <RemoveButton item={item} />
     </div>
   );
 }
