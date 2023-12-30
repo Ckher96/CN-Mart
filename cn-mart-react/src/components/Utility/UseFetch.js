@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function useFetch(url, method = "GET", body = null) {
+export default function useFetch(url) {
   const [data, setData] = useState([]);
   const [err, setErr] = useState(null);
 
@@ -9,15 +9,11 @@ export default function useFetch(url, method = "GET", body = null) {
     setData([]);
     async function getData() {
       const options = {
-        method: method,
+        method: "GET",
         headers: {
           "Content-Type": "application/json",
         },
       };
-
-      if (method === "POST") {
-        options.body = body;
-      }
 
       try {
         const data = await fetch(url, options);
@@ -29,7 +25,7 @@ export default function useFetch(url, method = "GET", body = null) {
       }
     }
     getData();
-  }, [url, method, body]);
+  }, [url]);
 
   return { data, err };
 }
