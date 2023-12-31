@@ -13,20 +13,23 @@ import Hours from "./components/Hours/Hours";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
       <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/store" element={<Store />}>
-          <Route path="/store" element={<StoreProducts />}  />
-          <Route path="/store/:itemCategory" element={<StoreCat />} />
-        </Route>
-        <Route path="/about" element={<About />} />
-        <Route path="/hours" element={<Hours />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/*" element={<h1>Path not found</h1>} />
-      </Routes>
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/store" element={<Store />}>
+            <Route path="/store" element={<StoreProducts />} />
+            <Route path="/store/:itemCategory" element={<StoreCat />} />
+          </Route>
+          <Route path="/about" element={<About />} />
+          <Route path="/hours" element={<Hours />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/*" element={<h1>Path not found</h1>} />
+        </Routes>
+      </div>
+
       <Footer />
     </div>
   );
