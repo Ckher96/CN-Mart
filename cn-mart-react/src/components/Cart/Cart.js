@@ -39,8 +39,8 @@ export default function Cart() {
 
   return (
     <>
-      <h1>Cart</h1>
-      <h2>{err}</h2>
+      <h2>Cart</h2>
+      <h3>{err}</h3>
       <div>totalPrice: {totalPrice}</div>
       <div className={style.cart_container}>{formatedCart}</div>
       <button onClick={addOrderHandler}>Add Order</button>

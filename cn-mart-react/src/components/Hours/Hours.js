@@ -2,7 +2,7 @@ import style from "./Hours.module.css"
 
 export default function Hours() {
     return <div className={style.container}>
-        <h1>Hours</h1>
+        <h2>Hours</h2>
         <ul>
             <li>Mon : 7am - 10pm</li>
             <li>Tue : 7am - 10pm</li>
