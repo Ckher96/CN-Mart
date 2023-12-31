@@ -9,6 +9,7 @@ import Cart from "./components/Cart/Cart";
 import StoreCat from "./components/Store/StoreCat";
 import About from "./components/About/About";
 import StoreProducts from "./components/Store/StoreProducts";
+import Hours from "./components/Hours/Hours";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           <Route path="/store/:itemCategory" element={<StoreCat />} />
         </Route>
         <Route path="/about" element={<About />} />
-        <Route path="/hours" element={<h1>Hours</h1>} />
+        <Route path="/hours" element={<Hours />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/*" element={<h1>Path not found</h1>} />
       </Routes>

@@ -1,0 +1,9 @@
+.container {
+    margin-left: 2rem;
+}
+
+.container ul {
+    list-style-type: none;
+    margin-block-start: 0;
+    padding-inline-start: 0;
+}
