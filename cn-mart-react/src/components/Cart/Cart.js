@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../../Context/CartContext";
 import style from "./Cart.module.css";
 import CartItemCard from "../Utility/CartItemCard";
@@ -21,19 +21,22 @@ export default function Cart() {
     return p;
   });
 
-  const addOrderHandler = async () => {
-    if (!cart.length) return setErr("Cart Is Empty");
-    try {
-      const data = await fetch("http://localhost:5000/cart", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ data: { items: cart, totalPrice } }),
-      });
-      console.log(data);
-    } catch (e) {
-      setErr(e.message);
+  const addOrderHandler = () => {
+    if (!cart.length) {
+      return setErr("Cart Is Empty");
+    } else {
+      try {
+        fetch("http://localhost:5000/cart", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ data: { items: cart, totalPrice } }),
+        })
+      } catch (e) {
+        setErr(e.message);
+      }
+      setCart([]);
     }
   };
 
