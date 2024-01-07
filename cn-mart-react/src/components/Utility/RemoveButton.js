@@ -1,11 +1,10 @@
 import { useContext } from "react";
 import { CartContext } from "../../Context/CartContext";
+import style from "./ItemCard.module.css";
 
-export default function RemoveButton({item}) {
+export default function RemoveButton({ item }) {
   const { cart, setCart } = useContext(CartContext);
-  const currentItem = cart.find(
-    (cartItem) => cartItem.name === item.name
-  );
+  const currentItem = cart.find((cartItem) => cartItem.name === item.name);
 
   const removeHandler = () => {
     if (currentItem.amount > 1) {
@@ -30,5 +29,13 @@ export default function RemoveButton({item}) {
     }
   };
 
-  return <button onClick={removeHandler}>Remove Item</button>;
+  return (
+    <button
+      className={style.removeBtn}
+      disabled={!currentItem?.amount}
+      onClick={removeHandler}
+    >
+      Remove Item
+    </button>
+  );
 }

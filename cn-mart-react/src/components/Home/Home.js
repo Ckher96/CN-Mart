@@ -27,10 +27,30 @@ export default function Home() {
       <div>
         <h2>We Sell</h2>
         <ul className={style.container}>
-          <li><Link to='store/chips'>Chips</Link></li>
-          <li><Link to='store/noodles'>Ramen</Link></li>
-          <li><Link to='store/drinks'>Drinks</Link></li>
-          <li><Link to='store/candy'>Candy</Link></li>
+          <li>
+            <Link to="store/chips">
+              Chips
+              <img src={require("../../images/chips.jpg")} alt="chips" />
+            </Link>
+          </li>
+          <li>
+            <Link to="store/noodles">
+              Noodles
+              <img src={require("../../images/noodles.jpg")} alt="noodles" />
+            </Link>
+          </li>
+          <li>
+            <Link to="store/drinks">
+              Drinks
+              <img src={require("../../images/drinks.jpg")} alt="drinks" />
+            </Link>
+          </li>
+          <li>
+            <Link to="store/candy">
+              Candy
+              <img src={require("../../images/candy.jpg")} alt="candy" />
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

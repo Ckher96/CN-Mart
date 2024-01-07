@@ -1,6 +1,18 @@
 .cart_container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
-    grid-template-rows: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  grid-template-rows: auto;
+}
+
+.addOrderBtn {
+  margin-top: 1rem;
+  background-color: rgb(65, 220, 65);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.price {
+    margin-bottom: 1rem;
+    color: rgb(35, 196, 196);
 }

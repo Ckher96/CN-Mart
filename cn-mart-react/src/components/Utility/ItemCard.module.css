@@ -1,11 +1,35 @@
 .card {
-    text-align: center;
-    background-color: aquamarine;
-    border-radius: 10px;
-    box-shadow: 5px 10px rgb(167, 166, 166);
+  text-align: center;
+
+  background-color: rgb(35, 196, 196);
+  border-radius: 10px;
+  box-shadow: 5px 10px rgb(167, 166, 166);
+}
+
+.card h3 {
+  color: rgb(255, 128, 0);
+  text-shadow: 2px 2px rgb(88, 87, 87);
 }
 
 .card img {
-    width: 100%;
-    height: 16rem;
+  width: 100%;
+  height: 10rem;
+}
+
+.addBtn {
+  background-color: rgb(65, 220, 65);
+  border-radius: 10px 0 0 10px;
+  cursor: pointer;
+}
+
+.removeBtn {
+  background-color: rgb(220, 104, 65);
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+@media (max-width: 616.32px) {
+  .addBtn,.removeBtn {
+    border-radius: 10px;
+  }
 }

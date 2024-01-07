@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../../Context/CartContext";
 import style from "./Cart.module.css";
-import CartItemCard from "../Utility/CartItemCard";
+import ItemCard from "../Utility/ItemCard";
 
 export default function Cart() {
   const { cart, setCart } = useContext(CartContext);
@@ -13,7 +13,7 @@ export default function Cart() {
   );
 
   const formatedCart = cart.map((item, index) => (
-    <CartItemCard key={index} item={item} />
+    <ItemCard key={index} item={item} />
   ));
 
   setCart((p) => {
@@ -44,9 +44,9 @@ export default function Cart() {
     <>
       <h2>Cart</h2>
       <h3>{err}</h3>
-      <div>totalPrice: {totalPrice}</div>
+      <h2 className={style.price}>TOTAL PRICE: {totalPrice}</h2>
       <div className={style.cart_container}>{formatedCart}</div>
-      <button onClick={addOrderHandler}>Add Order</button>
+      <button className={style.addOrderBtn} onClick={addOrderHandler}>Add Order</button>
     </>
   );
 }

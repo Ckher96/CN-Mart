@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header className={style.header}>
       <div className={style.logo}>
-        <h1>LOGO</h1>
+        <img src={require("../../images/logo.jpg")} alt="logo" />
       </div>
       <div className={style.storeName}>
         <h1>CN Mart</h1>
