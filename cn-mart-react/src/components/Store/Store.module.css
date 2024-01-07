@@ -45,6 +45,13 @@
   grid-template-rows: auto;
 }
 
+.backBtn {
+  background-color: rgb(65, 220, 65);
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 @media (max-width: 800px) {
   .container {
     display: grid;

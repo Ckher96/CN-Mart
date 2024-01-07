@@ -15,7 +15,7 @@ export default function StoreCat() {
 
   return (
     <div>
-      <button onClick={() => navigate("/store")}>Go Back</button>
+      <button className={style.backBtn} onClick={() => navigate("/store")}>Go Back</button>
       {!categorizedItems?.length && !err ? <h3>Loading</h3> : ""}
       {err && <h2>{err}</h2>}
       <div className={style.items}>{categorizedItems}</div>
