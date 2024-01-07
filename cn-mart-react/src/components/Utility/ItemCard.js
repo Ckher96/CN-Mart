@@ -15,8 +15,8 @@ export default function ItemCard({ item }) {
 
   return (
     <div className={style.card}>
-      <h3>{item.name}</h3>
-      <div>img</div>
+      <h3>{item.name.toUpperCase()}</h3>
+      {item.img ? <img src={item.img}/> : <div>img</div>}
       <div>{currentItem?.amount ? currentItem.amount : 0}</div>
       <h4>{item.price}</h4>
       <AddButton item={item} />
