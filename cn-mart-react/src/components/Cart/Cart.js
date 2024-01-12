@@ -26,7 +26,7 @@ export default function Cart() {
       return setErr("Cart Is Empty");
     } else {
       try {
-        fetch("http://localhost:5000/cart", {
+        fetch(`${process.env.REACT_APP_URL}cart`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

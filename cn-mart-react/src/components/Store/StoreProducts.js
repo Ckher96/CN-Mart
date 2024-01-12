@@ -4,7 +4,7 @@ import useFetch from "../Utility/UseFetch";
 import style from "./Store.module.css";
 
 export default function StoreProducts() {
-  const { data: storeItems, err } = useFetch("http://localhost:5000/store");
+  const { data: storeItems, err } = useFetch(`${process.env.REACT_APP_URL}store`);
 
   const formatedItems = storeItems?.map((item, index) => (
     <ItemCard key={index} item={item} />

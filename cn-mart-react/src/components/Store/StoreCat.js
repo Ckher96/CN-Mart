@@ -7,7 +7,7 @@ export default function StoreCat() {
   const { itemCategory } = useParams();
   const navigate = useNavigate();
 
-  const { data, err } = useFetch(`http://localhost:5000/store/${itemCategory}`);
+  const { data, err } = useFetch(`${process.env.REACT_APP_URL}store/${itemCategory}`);
   
   const categorizedItems = data?.map((item, index) => (
     <ItemCard key={index} item={item} />
